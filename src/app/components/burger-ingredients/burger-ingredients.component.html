@@ -1,0 +1,42 @@
+<h4 class="card-title text-center">Make your own Burger!</h4>
+<div *ngFor="let ingredient of ingredients">
+  <div *ngIf="hasIngredient(ingredient.type, 'bread_top')">
+    <div
+      class="w-auto p-5 mt-1 bg bg-secondary rounded-bottom"
+      [ngStyle]="{
+        background: 'linear-gradient(#f08e4a, #e27b36)',
+        'border-radius': '75%'
+      }"
+    ></div>
+  </div>
+  <div *ngIf="hasOnlyBread(ingredient.type)" class="pt-1 text-center">
+    <p>Start adding ingredients !!</p>
+  </div>
+  <div *ngIf="hasIngredient(ingredient.type, 'cheese')">
+    <div
+      *ngFor="let item of ingredient.quantity"
+      class="w-100 p-2 mt-1 bg-warning rounded-pill"
+    ></div>
+  </div>
+  <div *ngIf="hasIngredient(ingredient.type, 'meat')">
+    <div
+      *ngFor="let item of ingredient.quantity"
+      class="w-100 p-2 bg-danger rounded-pill mt-1"
+    ></div>
+  </div>
+  <div *ngIf="hasIngredient(ingredient.type, 'salad')">
+    <div
+      *ngFor="let item of ingredient.quantity"
+      class="w-100 p-2 bg-success rounded-pill mt-1"
+    ></div>
+  </div>
+  <div *ngIf="hasIngredient(ingredient.type, 'bread_bottom')">
+    <div
+      class="w-auto p-5 mt-1 bg bg-secondary rounded-top"
+      [ngStyle]="{
+        background: 'linear-gradient(#f08e4a, #e27b36)',
+        'border-radius': '75%'
+      }"
+    ></div>
+  </div>
+</div>

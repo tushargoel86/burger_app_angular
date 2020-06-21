@@ -1,0 +1,54 @@
+<div class="justify-content-center mt-5">
+  <div class="form">
+    <div class="form-group row text-center">
+      <label class="col-sm-3">Cheese</label>
+      <button
+        (click)="addIngredient('cheese')"
+        class="col-1 bg-info mr-2 form-control"
+      >
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </button>
+      <button
+        (click)="removeIngredient('cheese')"
+        class="col-1 bg-danger form-control"
+      >
+        <i class="fa fa-minus" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="form-group row text-center">
+      <label class="col-sm-3">Meat</label>
+      <button
+        (click)="addIngredient('meat')"
+        class="col-1 bg-info mr-2 form-control"
+      >
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </button>
+      <button
+        (click)="removeIngredient('meat')"
+        class="col-1 bg-danger form-control"
+      >
+        <i class="fa fa-minus" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="form-group row text-center">
+      <label class="col-sm-3">Salad</label>
+      <button
+        (click)="addIngredient('salad')"
+        class="col-1 bg-info mr-2 form-control"
+      >
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </button>
+      <button
+        (click)="removeIngredient('salad')"
+        class="col-1 bg-danger form-control"
+      >
+        <i class="fa fa-minus" aria-hidden="true"></i>
+      </button>
+    </div>
+    <!-- <div class="row">
+      <div class="form-group col text-center">
+        <button (click)="submitOrder($event)" class="bg-dark form-control">Order Now!</button>
+      </div>
+    </div> -->
+  </div>
+</div>

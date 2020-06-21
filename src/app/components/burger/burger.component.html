@@ -1,0 +1,18 @@
+<div class="container mt-3" style="width: '50%';">
+  <div class="card border-primary" style="width: '75%'">
+    <div class="card-body">
+      <app-burger-ingredients
+        [ingredients]="ingredients"
+      ></app-burger-ingredients>
+      <hr />
+      <app-burger-controller
+        (ingredientAdded)="onIngredientAdded($event)"
+        (ingredientRemoved)="onIngredientRemoved($event)"
+      ></app-burger-controller>
+      <app-order
+        [ingredients]="ingredients" 
+        (clearIngredients)="clearIngredients($event)"
+      ></app-order>
+    </div>
+  </div>
+</div>
